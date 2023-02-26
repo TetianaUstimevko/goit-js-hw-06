@@ -1,11 +1,23 @@
-/* <form id="login-form">
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" required>
-  <br>
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" required>
-  <br>
-  <button type="submit">Log In</button>
-</form> */
+const loginForm = document.querySelector('.login-form');
 
+loginForm.addEventListener("submit", (event) => {
 
+    event.preventDefault();
+
+    const email = loginForm.elements.email.value;
+    const passvord = loginForm.elements.password.value;
+    
+  if (!email || !passvord) {
+    alert("Please fill in all fields");
+    return;
+  }
+
+  const formData = {
+    email,
+    passvord,
+  };
+
+  console.log(formData);
+
+  loginForm.reset();
+});
