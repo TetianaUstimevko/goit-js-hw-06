@@ -7,16 +7,27 @@ const ingredients = [
   'Condiments',
 ];
 
-const listCreate = document.querySelector('#ingredients');
+const ul = document.getElementById("ingredients");
 
-const createItems = function(items) {
-  return items.map((item) => {
-  const li = document.createElement('li');
-  li.classList = 'item';
-  li.textContent = item;
-  return li;
-  });
-};
+for (let i = 0; i < ingredients.length; i++) {
+  const li = document.createElement("li");
+  li.textContent = ingredients[i];
+  li.classList.add("item");
+  ul.appendChild(li);
+}
 
-const items = createItems(ingredients);
-listCreate.append(...items);
+// 2-й спосіб
+
+// const listCreate = document.querySelector('#ingredients');
+
+// const createItems = function(items) {
+//   return items.map((item) => {
+//   const li = document.createElement('li');
+//   li.classList = 'item';
+//   li.textContent = item;
+//   return li;
+//   });
+// };
+
+// const items = createItems(ingredients);
+// listCreate.append(...items);
