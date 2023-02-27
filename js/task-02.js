@@ -1,19 +1,23 @@
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
 
-const ul = document.getElementById("ingredients");
+const ulIngredients = document.getElementById("ingredients");
 
 for (let i = 0; i < ingredients.length; i++) {
+
   const li = document.createElement("li");
+
   li.textContent = ingredients[i];
+
   li.classList.add("item");
-  ul.appendChild(li);
+
+  ulIngredients.appendChild(li);
 }
 
 // 2-й спосіб
